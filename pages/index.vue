@@ -1,14 +1,16 @@
 <template>
   <div id="TimelineContainer">
-    <post
-      :name=name
-      :icon=icon
-      :body=body
-      :groupName=groupName
-      :dateTime=dateTime
-    >
-    </post>
+    <div class="thread" v-for="post in posts">
+      <post
+        :name=post.name
+        :icon=post.icon
+        :body=post.body
+        :groupName=post.groupName
+        :dateTime=post.dateTime
+      >
+      </post>
     <hr>    
+    </div>    
   </div>
 </template>
 
@@ -21,12 +23,25 @@ export default {
   },
   data() {
     return  {
+      posts: [ 
+        {
           name: "江藤光",
           icon: "http://placehold.jp/32x32.png",
           body: "テスト本文テスト本文テスト本文テスト本文テスト本文",
           groupName: "トピック",
           dateTime: "2019/12/11 14:50",
           reply: "",
+        },
+        {
+          name: "江藤光2",
+          icon: "http://placehold.jp/32x32.png",
+          body: "テスト本文2テスト本文2テスト本文2テスト本文2テスト本文2",
+          groupName: "トピック",
+          dateTime: "2019/12/11 14:50",
+          reply: "",
+        }
+
+      ]
     }
   },
 }
