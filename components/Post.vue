@@ -9,8 +9,8 @@
         <div class="column">
             <p class="post-user-name">{{ name }}</p>
             <p class="post-group"><span class="post-group-guide">投稿先グループ</span><span class="post-group-name">{{ groupName }}</span></p>
-        </div>      
-        </div>  
+        </div>
+        </div>
         <div class="post-body">
           <pre class="post-body post-body-top">{{ body }}</pre>
         </div>
@@ -77,7 +77,6 @@ export default {
   pre.post-body {
     padding-top: .5rem;
     padding-bottom: 0;
-    padding-left: 0;
     white-space: pre-wrap;
   }
   pre.post-body-top {
