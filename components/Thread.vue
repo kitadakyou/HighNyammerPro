@@ -1,6 +1,6 @@
 <template>
 <div class="thread">
-  <div v-for="post in posts">
+  <div v-for="(post, idx) in posts">
       <post
         :name=post.name
         :icon=post.icon
@@ -9,7 +9,8 @@
         :dateTime=post.dateTime
       >
       </post>
-  <hr>    
+  
+  <hr v-if="idx !== posts.length - 1">
   </div>
 </div>
 </template>
