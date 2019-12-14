@@ -1,25 +1,16 @@
 <template>
   <div id="TimelineContainer">
-    <div class="thread" v-for="post in posts">
-      <post
-        :name=post.name
-        :icon=post.icon
-        :body=post.body
-        :groupName=post.groupName
-        :dateTime=post.dateTime
-      >
-      </post>
-    <hr>    
-    </div>    
+    <thread :posts=posts>
+    </thread>        
   </div>
 </template>
 
 <script>
-import Post from '~/components/Post'
+import Thread from '~/components/Thread'
 
 export default {
   components: {
-    Post
+    Thread
   },
   data() {
     return  {
