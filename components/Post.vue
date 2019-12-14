@@ -22,6 +22,18 @@
                 custom-class="reply-field">
             </b-input>
         </b-field>
+        <div class="columns">
+          <div class="column is-1">
+             <b-icon
+                icon="attachment"
+            >
+             </b-icon>
+          </div>
+          <div class="column is-offset-10 is-1">
+              <b-button @click="alert('clicked')" disabled><b-icon icon="send"></b-icon><span>送信</span></b-button>
+          </div>
+        </div>
+           
     </div>    
 </template>
 
