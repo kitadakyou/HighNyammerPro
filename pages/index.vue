@@ -16,15 +16,12 @@ export default {
     return  {
       posts: [ 
         {
-          name: "近藤 秀樹",
-          icon: "http://milais.highnyammer.com/uploads/cache/attachments/1fb1a4ebe9a91d0c32b71a30d31ffb7e.jpg",
-          body: "2019/12 の稼働の予定についてです．諸般の事情から，近藤は 12/23 からお休みを取ることになりました．(まあ休みといってもやることは山盛りなんですけども)\n\
-12/23 には授業があり，みなさんは 12/24 から冬期休業となっていると思います．大変恐縮ですが，12/23 の授業はみなさんだけでうまく回していただけますよう御協力をお願いしたく思います．\n\
-\n\
-新年は 1/6 からとなります．\n\
-\n\
-どうぞよろしくお願いします．",
-          groupName: "アナウンス",
+          name: "江藤光",
+          icon: "https://avatars3.githubusercontent.com/u/4303909?s=32&v=4",
+          body: "2019/12/14 3限\n\
+コーヒーを飲んで過ごしました。\n\
+Macの貸し出しがあったので対応しました。などなど",
+          groupName: "シフト活動記録",
           dateTime: "2019/12/11 14:50",
           reply: "",
         },
