@@ -3,7 +3,7 @@
         <div class="columns post-header">
         <div class="column  is-narrow">
             <div style="width: 32px;">
-                <img class="user-icon" :src="icon">
+                <img width=32 height=32 class="user-icon" :src="icon">
             </div>
         </div>
         <div class="column">
@@ -12,9 +12,7 @@
         </div>      
         </div>  
         <div class="post-body">
-          <pre class="post-body post-body-top">
-            {{ body }}
-          </pre>
+          <pre class="post-body post-body-top">{{ body }}</pre>
         </div>
         <b-field>
             <b-input
@@ -80,6 +78,7 @@ export default {
     padding-top: .5rem;
     padding-bottom: 0;
     padding-left: 0;
+    white-space: pre-wrap;
   }
   pre.post-body-top {
     background-color: white;
