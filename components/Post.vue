@@ -30,7 +30,7 @@
              </b-icon>
           </div>
           <div class="column is-offset-10 is-1">
-              <b-button @click="alert('clicked')" disabled><b-icon icon="send"></b-icon><span>送信</span></b-button>
+              <b-button @click="alert('clicked')" :disabled="isDisabledSendButton"><b-icon icon="send"></b-icon><span>送信</span></b-button>
           </div>
         </div>
            
@@ -66,6 +66,11 @@ export default {
           reply: ""
         }
     },
+    computed: {
+      isDisabledSendButton: function() {
+        return this.reply === "";
+      }
+    }
 }
 </script>
 
