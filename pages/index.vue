@@ -1,35 +1,24 @@
 <template>
   <div id="TimelineContainer">
-    <div class="post">
-        <div class="columns post-header">
-        <div class="column  is-narrow">
-            <div style="width: 32px;">
-                <img class="user-icon" :src="icon">
-            </div>
-        </div>
-        <div class="column">
-            <p class="post-user-name">{{ name }}</p>
-            <p class="post-group"><span class="post-group-guide">投稿先グループ</span><span class="post-group-name">{{ groupName }}</span></p>
-        </div>      
-        </div>  
-        <div class="post-body">
-          <pre class="post-body post-body-top">{{ body }}</pre>
-        </div>
-        <b-field>
-            <b-input
-                type="textarea"
-                v-model="reply"
-                placeholder="返信を書く…"
-                custom-class="reply-field">
-            </b-input>
-        </b-field>
-    </div>
+    <post
+      :name=name
+      :icon=icon
+      :body=body
+      :groupName=groupName
+      :dateTime=dateTime
+    >
+    </post>
     <hr>    
   </div>
 </template>
 
 <script>
+import Post from '~/components/Post'
+
 export default {
+  components: {
+    Post
+  },
   data() {
     return  {
           name: "江藤光",
