@@ -1,8 +1,8 @@
 {
-  "name": "my-test-project",
+  "name": "high-nyammer-pro",
   "version": "1.0.0",
-  "description": "My glorious Nuxt.js project",
-  "author": "",
+  "description": "HighNyammer for Professional",
+  "author": "Hikaru ETO",
   "private": true,
   "scripts": {
     "dev": "nuxt",
