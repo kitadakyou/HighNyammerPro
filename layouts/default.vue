@@ -1,5 +1,5 @@
 <template>
-<main>
+<main class="container">
   <div class="columns">
     <aside id="SidemenuContainer" class="column is-3">
       <b-menu>
