@@ -1,7 +1,7 @@
 <template>
 <main>
   <div class="columns">
-    <div id="SidemenuContainer" class="column is-3">
+    <aside id="SidemenuContainer" class="column is-3">
       <b-menu>
         <b-menu-list label="グループ">
             <b-menu-item v-for="group in groups"
@@ -11,7 +11,7 @@
             </b-menu-item>
         </b-menu-list>
       </b-menu>
-    </div>
+    </aside>
       <nuxt />
   </div>
 </main>
