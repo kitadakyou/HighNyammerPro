@@ -1,7 +1,7 @@
 <template>
 <div class="app">
     <b-navbar
-      type=""
+      type="is-light"
     >
       <template slot="brand">
           <b-navbar-item tag="router-link" :to="{ path: '/' }">
