@@ -42,23 +42,6 @@ Macの貸し出しがあったので対応しました。などなど",
   #TimelineContainer {
     padding: 3rem;
   }
-
-  .post-header {
-    margin-bottom: 0;
-  }
-  img.user-icon {
-    margin-top: .5rem;
-  }
-  .post-user-name {
-    font-size: 1rem;
-  }
-  .post-group {
-    font-size: .8rem;
-  }
-  .post-group .post-group-guide {
-    color: #606770;
-    margin-right: .6rem;
-  }
 </style>
 
 <style>
