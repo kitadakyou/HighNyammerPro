@@ -92,6 +92,7 @@ export default {
     margin-right: .6rem;
   }
   pre.post-body {
+    font-size: inherit;
     padding-top: .5rem;
     padding-bottom: 0;
     white-space: pre-wrap;

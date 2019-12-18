@@ -32,7 +32,6 @@ Macの貸し出しがあったので対応しました。などなど",
           dateTime: "2019/12/11 14:50",
           reply: "",
         }
-
       ]
     }
   },
@@ -59,13 +58,6 @@ Macの貸し出しがあったので対応しました。などなど",
   .post-group .post-group-guide {
     color: #606770;
     margin-right: .6rem;
-  }
-  pre.post-body {
-    padding-top: .5rem;
-    padding-bottom: 0;
-  }
-  pre.post-body-top {
-    background-color: white;
   }
 </style>
 
