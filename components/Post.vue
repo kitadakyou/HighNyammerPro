@@ -93,6 +93,7 @@ export default {
   }
   pre.post-body {
     font-size: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     padding-top: .5rem;
     padding-bottom: 0;
     white-space: pre-wrap;

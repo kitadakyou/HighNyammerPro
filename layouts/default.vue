@@ -127,6 +127,10 @@ export default {
 </script>
 
 <style scoped>
+  #app {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  }
+
   #SidemenuContainer {
     text-align: right;
     background: #f5f5f5;
