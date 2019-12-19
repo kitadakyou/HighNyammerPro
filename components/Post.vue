@@ -24,10 +24,15 @@
         </b-field>
         <div class="level">
           <div class="level-left">
-             <b-icon
-                icon="attachment"
-            >
-             </b-icon>
+            
+            <span class="attachment-icon" @click="fileAttach">
+              <b-icon
+                  icon="attachment"
+                >
+              </b-icon>
+            <input type="file" class="file-elem" style="display:none" @change="handleFiles">
+            </span>
+             <span v-if="attachmentFileName !== ''" class="attachment-file-name">{{ attachmentFileName}} <span @click="removeAttachFile"><b-icon icon="close-circle" size="is-small" type="is-dark"></b-icon></span></span>
           </div>
           <div class="level-right">
               <b-button @click="alert('clicked')" :disabled="isDisabledSendButton"><b-icon icon="send"></b-icon><span>送信</span></b-button>
@@ -63,12 +68,28 @@ export default {
     },
     data() {
         return  {
-          reply: ""
+          reply: "",
+          attachmentFileName: "",          
         }
     },
     computed: {
       isDisabledSendButton: function() {
         return this.reply === "";
+      }
+    },
+    methods: {
+      fileAttach: function() {        
+        let fileElem = this.$el.querySelector('.file-elem');
+        console.log(fileElem);
+        fileElem.click();
+      },
+      handleFiles: function(e) {        
+        this.attachmentFileName = e.srcElement.files[0].name;
+      },
+      removeAttachFile: function() {
+        let fileElem = this.$el.querySelector('.file-elem');
+        fileElem.value = '';
+        this.attachmentFileName = '';
       }
     }
 }
@@ -100,6 +121,12 @@ export default {
   }
   pre.post-body-top {
     background-color: white;
+  }
+  span.attachment-file-name {
+    font-size: .8rem;
+    margin-left: .5rem;
+    padding: .2rem;
+    background-color: #f5f5f5
   }
 </style>
 
