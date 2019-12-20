@@ -1,7 +1,8 @@
 <template>
 <div class="app">
     <b-navbar
-      type="is-light"
+      type="is-dark"
+      wrapper-class="container"
     >
       <template slot="brand">
           <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -26,56 +27,32 @@
                       custom-class="seach-bar">
                     </b-input>
                   </b-field>
-                  <b-dropdown
-                    hoverable              
-                    v-model="navigation"
-                    position="is-bottom-left"
-                    aria-role="menu">
-                    <a
-                        class="navbar-item"
-                        slot="trigger"
-                        role="button">
-                        <span>Menu</span>
-                        <b-icon icon="menu-down"></b-icon>
-                    </a>
-
-                    <b-dropdown-item custom aria-role="menuitem">
-                      <a href="/users/edit" class="user-info">
-                        <img :src=user.icon><span class="user-name">{{user.name}}</span>
-                      </a>
-                    </b-dropdown-item>
+                  <b-navbar-dropdown label="Menu">
+                    <b-navbar-item href="/users/edit">
+                      <img :src=user.icon><span class="user-name">{{user.name}}</span>
+                    </b-navbar-item>
                     <hr class="dropdown-divider">
-                    <b-dropdown-item has-link aria-role="menuitem">
-                        <a href="/analytics/community">
-                            <b-icon icon="chart-line"></b-icon>
-                            共同体全体の分析
-                        </a>
-                    </b-dropdown-item>
-                    <b-dropdown-item has-link aria-role="menuitem" v-if="user.is_admin">
-                        <a href="#">
-                            <b-icon icon="settings"></b-icon>
-                            管理機能
-                        </a>
-                    </b-dropdown-item>
-                    <b-dropdown-item has-link aria-role="menuitem">
-                        <a href="developer/portal">
-                            <b-icon icon="pickaxe"></b-icon>
-                            開発者機能
-                        </a>
-                    </b-dropdown-item>
-                    <b-dropdown-item has-link aria-role="menuitem">
-                        <a href="feed">
-                            <b-icon icon="rss"></b-icon>
-                            RSSフィード
-                        </a>
-                    </b-dropdown-item>
-                    <b-dropdown-item has-link aria-role="menuitem">
-                        <a href="/users/sign_out">
-                            <b-icon icon="logout"></b-icon>
-                            ログアウト
-                        </a>
-                    </b-dropdown-item>
-                </b-dropdown>
+                    <b-navbar-item href="/analytics/community">
+                        <b-icon icon="chart-line"></b-icon>
+                        共同体全体の分析
+                    </b-navbar-item>
+                    <b-navbar-item v-if="user.is_admin" href="#">
+                        <b-icon icon="settings"></b-icon>
+                        管理機能
+                    </b-navbar-item>
+                    <b-navbar-item href="developer/portal">
+                        <b-icon icon="pickaxe"></b-icon>
+                        開発者機能
+                    </b-navbar-item>
+                    <b-navbar-item href="feed">
+                        <b-icon icon="rss"></b-icon>
+                        RSSフィード
+                    </b-navbar-item>
+                    <b-navbar-item href="/users/sign_out">
+                        <b-icon icon="logout"></b-icon>
+                        ログアウト
+                    </b-navbar-item>
+                </b-navbar-dropdown>
               </div>
           </b-navbar-item>
       </template>
