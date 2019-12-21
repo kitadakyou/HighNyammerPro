@@ -103,7 +103,6 @@ export default {
       return this.replyText === "";
     },
     replyColumnClass: function() {
-      console.log(this.depth);
       return "column is-" + (12 - this.depth) + " is-offset-" + this.depth;
     },
   },
