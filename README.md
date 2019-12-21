@@ -1,6 +1,6 @@
-# my-test-project
+# HighNyammer Pro
 
-> My glorious Nuxt.js project
+> The best for the brightest.
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
