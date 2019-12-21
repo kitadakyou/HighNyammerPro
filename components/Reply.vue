@@ -1,7 +1,7 @@
 <template>
-  <div class="reply">
-    <div class="columns">
-      <div :class="replyContainerClass">
+  <div class="reply">    
+    <div class="columns reply-container">
+      <div :class="replyColumnClass">
         <div class="columns reply-header">
           <div class="column  is-narrow">
               <div style="width: 32px;">
@@ -102,7 +102,7 @@ export default {
     isDisabledSendButton: function() {
       return this.replyText === "";
     },
-    replyContainerClass: function() {
+    replyColumnClass: function() {
       console.log(this.depth);
       return "column is-" + (12 - this.depth) + " is-offset-" + this.depth;
     },
@@ -126,6 +126,11 @@ export default {
 </script>
 
 <style scoped>
+  .reply-container {
+    border-bottom: solid .4rem #ffffff;
+    margin-top: 0;  
+  }
+
   .reply-header {
     margin-bottom: 0;
   }
