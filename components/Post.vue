@@ -17,7 +17,7 @@
         <b-field>
             <b-input
                 type="textarea"
-                v-model="reply"
+                v-model="replyText"
                 placeholder="返信を書く…"
                 custom-class="reply-field">
             </b-input>
@@ -65,16 +65,20 @@ export default {
             type: String,
             required: true,
         },
+        replies: {
+          type: Array,
+          required: true,
+        }
     },
     data() {
         return  {
-          reply: "",
+          replyText: "",
           attachmentFileName: "",          
         }
     },
     computed: {
       isDisabledSendButton: function() {
-        return this.reply === "";
+        return this.replyText === "";
       }
     },
     methods: {
